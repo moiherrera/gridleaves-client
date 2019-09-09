@@ -1,6 +1,5 @@
 'use strict'
-// CRUD information
-// api.signUp will allow us to use the ajax object, the ajax object will be passed to the api.signUp.
+
 const config = require('../config')
 const store = require('../store')
 
@@ -29,10 +28,7 @@ const changePassword = function (data) {
     data: data
   })
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> development
 const signOut = function (data) {
   return $.ajax({
     url: config.apiUrl + '/sign-out',
