@@ -41,6 +41,7 @@ const onSignOut = function (event) {
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
 }
+
 // ui.signInSuccess , pass whatever API gives it, in this case its TOKEN.
 module.exports = {
   onSignUp,
