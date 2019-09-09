@@ -28,7 +28,11 @@ const onSignIn = function (event) {
 
 const onChangePassword = function (event) {
   event.preventDefault()
+<<<<<<< HEAD
   const data = getFormFields(event.target) // data = {passwords: {old: 123, new: 456}}
+=======
+  const data = getFormFields(event.target)
+>>>>>>> development
   api.changePassword(data)
     .then(ui.changePasswordSuccess)
     .catch(ui.changePasswordFailure)
@@ -41,6 +45,10 @@ const onSignOut = function (event) {
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> development
 // ui.signInSuccess , pass whatever API gives it, in this case its TOKEN.
 module.exports = {
   onSignUp,

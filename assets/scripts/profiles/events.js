@@ -3,6 +3,10 @@
 const api = require('./api')
 const ui = require('./ui')
 const getFormFields = require('./../../../lib/get-form-fields')
+<<<<<<< HEAD
+=======
+
+>>>>>>> development
 const onGetProfiles = function () {
   api.index()
     .then(ui.onIndexSuccess)
