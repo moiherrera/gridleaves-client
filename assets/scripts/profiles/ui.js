@@ -19,9 +19,11 @@ const onIndexSuccess = (data) => {
   console.log(data)
   console.log(data.profiles)
   const showProfilesHtml = showProfilesTemplate({profiles: data.profiles})
+  $('#create-profile').hide()
   $('.content').html(showProfilesHtml)
   $('.content').show()
   $('#new-profile').on('click', onAddNewProfile)
+  $('#get-profiles').hide()
 }
 const onAddNewProfile = function () {
   console.log('hello')

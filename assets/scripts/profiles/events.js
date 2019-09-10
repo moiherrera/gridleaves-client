@@ -19,6 +19,8 @@ const onCreateProfile = event => {
 }
 
 const onGetProfiles = function (event) {
+  event.preventDefault()
+  console.log('ran')
   api.index(event)
     .then(ui.onIndexSuccess)
     .catch(ui.onIndexFailure)
