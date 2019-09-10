@@ -37,25 +37,57 @@
     </div>
     <div class="second-view">
       <div id="message2"></div>
-      <div class="container">
-            <div class="row col-6">
-              <div class="grid col-4 box" data-cell-index='0'></div>
-              <div class="grid col-4 box" data-cell-index='1'></div>
-              <div class="grid col-4 box" data-cell-index='2'></div>
-              <div class="grid col-4 box" data-cell-index='3'></div>
-              <div class="grid col-4 box" data-cell-index='4'></div>
-              <div class="grid col-4 box" data-cell-index='5'></div>
-              <div class="grid col-4 box" data-cell-index='6'></div>
-              <div class="grid col-4 box" data-cell-index='7'></div>
-              <div class="grid col-4 box" data-cell-index='8'></div>
-            </div>
-          </div>
-      <form id='create-profile' class='border'>
-          <fieldset>
-              <legend>Create profile</legend>
-              <input type="submit" value="Create Profile">
-          </fieldset>
-      </form>
+      <h3> Gridleaves Profiles </h3>
+
+      <form class="form1" action="" id='create-profile'>
+
+        <label for="name" class="input_name">Full Name</label>
+        <input name= "profile[name]" id="input_Name" type="text">
+
+        <label for="location" class="input_location">Location</label>
+        <input name= "profile[location]" id="input_location" type="text">
+
+        <label for="image-links" class="input_image_links">Link for Image</label>
+        <input name="profile[image_links]" id="input_image_links" type="text">
+
+        <label for="personal_assets" class="input_personal_assets">Personal Assets</label>
+        <p> Please tell us what you can provide for the community. This can range from your professional skillset to soft skills to personal assets such as meeting places, resources, or connections that can be utilized by the community to further any community development projects. </p>
+        <input name="profile[personal_assets]" id="input_personal_assets" type="text">
+
+        <label for="professional_interests" class="input_professional_interests">Professional Interests</label>
+        <p> Please tell us about your professional interests. Where are you working and for how long? What have you learned from your career? Have you ever considered using your professional skillset you improve your local neighborhood? Would you like to be connected with likeminded professionals in your area to develop local partnerships and projects? Please list anything that you want the community to know about your professional interests and how it might relate to community development.</p>
+        <input name="profile[professional_interests]" id="input_professional_interests" type="text">
+
+        <label for="hobbies" class="input_hobbies">Hobbies</label>
+        <input name="profile[hobbies]" id="input_hobbies" type="text">
+
+        <label for="projects" class="input_projects">Projects</label>
+        <p> Please list any projects you are currently working on and any projects you would like to see implemented in the community. Ex: Developing a community_garden, forming a tenant union, weekly street clean up, developing a compost program, etc.</p>
+        <input name="profile[projects]" id="input_projects" type="text">
+
+        <label for="contact_info" class="input_contact_info">Contact_Info</label>
+        <p> Please list any contact information you are comfortable sharing. This includes but is not limited to: phone number, email, social media links, portfolios, linkedin, or personal websites. </p>
+        <input name="profile[contact_info]" id="input_contact_info" type="text">
+
+        <label for="express" class="input_express">Express</label>
+        <p> This form allows you to express yourself in anyway you choose. Write a poem, provide a link to a website, let us know whats on your mind, anything that might help the community understand you a bit better, put it in this form (: </p>
+        <input name="profile[express]" id="input_express" type="text">
+
+        <label for="pronouns" class="input_pronouns">Pronouns</label>
+        <input name="profile[pronouns]" id="input_pronouns" type="text">
+
+        <label for="community_assets" class="input_community_assets">Community Assets</label>
+        <p> Many individuals are not aware of all the resources in the area that they live in. A community asset can be defined as anything that can be used to improve the quality of community life. This could be a person with particular skillset, it can be a physical structure or place such as a park or a community center, it can be organizations that are located within the community. Let us know what resources you have used in your community or any that you are familiar with. </p>
+        <input name="profile[community_assets]" id="input_community_assets" type="text">
+
+        <button>Create Profile</button>
+
+    </form>
+
+    <div id="content" class="content">
+    </div>
+
+
       <form id='sign-out' class='border'>
           <fieldset>
               <legend>Sign Out</legend>

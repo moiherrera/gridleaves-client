@@ -1,19 +1,46 @@
-
-<table>
-<thead>
-  <tr>
-    {{#each array.[0]}}
-      <th>{{@key}}</th>
-    {{/each}}
-  </tr>
-</thead>
-<tbody>
-  {{#each array}}
-    <tr>
-    	{{#each this}}
-        <td>{{this}}</td>
+<div class="gridleavesTable" id="gridleavesTable">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Image Links</th>
+        <th>Personal Assets</th>
+        <th>Professional Interests</th>
+        <th>Hobbies</th>
+        <th>Projects</th>
+        <th>Contact Information</th>
+        <th>Express</th>
+        <th>Age</th>
+        <th>Pronouns</th>
+        <th>Community Assets</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each profiles as |profile|}}
+      <tr>
+        <td>{{profile.name}}</td>
+        <td>{{profile.location}}</td>
+        <td>{{profile.image_link}}</td>
+        <td>{{profile.personal_assets}}</td>
+        <td>{{profile.professional_interests}}</td>
+        <td>{{profile.hobbies}}</td>
+        <td>{{profile.projects}}</td>
+        <td>{{profile.contact_info}}</td>
+        <td>{{profile.express}}</td>
+        <td>{{profile.age}}</td>
+        <td>{{profile.pronouns}}</td>
+        <td>{{profile.community_assets}}</td>
+        <td><button class="edit-profile btn btn-warning" data-profile-id="{{profile.id}}">Edit</button>
+          <button class="delete-profile btn btn-danger" data-profile-id="{{profile.id}}">Delete {{profile.id}}</button>
+        </td>
+      </tr>
       {{/each}}
-    </tr>
-  {{/each}}
-</tbody>
-</table>
+    </tbody>
+  </table>
+
+
+  <div>
+    <button id='new-profile' class="btn btn-lg btn-primary">Add New Profile</button>
+  </div>
+</div>

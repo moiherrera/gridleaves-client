@@ -18,12 +18,11 @@ const signUpFailure = function () {
 
 const signInSuccess = function (data) {
   store.user = data.user
-  $('#message2').text('Successful sign-in! Create Game')
+  $('#message2').text('Successful sign-in! Create Profile')
   $('#message2').removeClass('success') // better?
   $('#message2').addClass('success')
   $('#auth-events').hide()
   $('.second-view').show()
-  $('.container').hide()
   $('#signed-in-user').text(store.user.email)
   $('form').trigger('reset')
 }
