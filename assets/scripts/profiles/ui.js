@@ -21,6 +21,12 @@ const onIndexSuccess = (data) => {
   const showProfilesHtml = showProfilesTemplate({profiles: data.profiles})
   $('.content').html(showProfilesHtml)
   $('.content').show()
+  $('#new-profile').on('click', onAddNewProfile)
+}
+const onAddNewProfile = function () {
+  console.log('hello')
+  $('#content').hide()
+  $('#create-profile').show()
 }
 // }
 
@@ -37,5 +43,6 @@ const onIndexSuccess = (data) => {
 module.exports = {
   onCreateSuccess,
   onCreateFailure,
-  onIndexSuccess
+  onIndexSuccess,
+  onAddNewProfile
 }
