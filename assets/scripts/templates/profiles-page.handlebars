@@ -18,7 +18,6 @@
       </tr>
     </thead>
     {{#each profiles as |profile|}}
-    {{log profile}}
     <tbody>
       <tr>
         <td>{{profile.name}}</td>
@@ -33,7 +32,9 @@
         <td>{{profile.age}}</td>
         <td>{{profile.pronouns}}</td>
         <td>{{profile.community_assets}}</td>
+        {{#if profile.editable}}
         <td><button class="delete-profile btn btn-danger" data-id="{{profile.id}}">Delete </button></td>
+        {{/if}}
       </tr>
     </tbody>
     {{/each}}
@@ -44,7 +45,8 @@
   </div>
 </div>
 {{#each profiles as |profile|}}
-          {{log profile}}
+
+{{#if profile.editable}}
 <form class="update-profile-form">
       <h2>Update</h2>
       <div class='update-profile' data-id="{{profile.id}}" value="{{profile.id}}">  </div>
@@ -63,6 +65,7 @@
       <input name="profile[community_assets]" value="{{profile.community_assets}}"  type="text" placeholder="text">
       <input type="submit" value="Update Profile">
   </form>
+  {{/if}}
   {{/each}}
 
   </div>
