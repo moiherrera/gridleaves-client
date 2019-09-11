@@ -26,14 +26,16 @@ const onGetProfiles = function (event) {
     .catch(ui.onIndexFailure)
 }
 
-const onUpdateProfile = function (data) {
+const onUpdateProfile = function (event) {
+  console.log('Hello')
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
-  api.updateGame(formData)
-    .then(() => {
+  console.log(formData)
+  api.update(formData)
+    .then(function (formData) {
+      onGetProfiles(event)
       ui.onUpdateSuccess()
-      onGetProfiles()
     })
     .catch(ui.onUpdateFailure)
 }

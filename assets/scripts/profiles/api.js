@@ -34,7 +34,7 @@ const create = formData => {
   })
 }
 
-const update = formData => {
+const update = (formData) => {
   return $.ajax({
     url: config.apiUrl + '/profiles/' + formData.profile.id,
     method: 'PATCH',

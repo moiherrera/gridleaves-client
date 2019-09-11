@@ -24,7 +24,17 @@ const onIndexSuccess = (data) => {
   $('.content').show()
   $('#new-profile').on('click', onAddNewProfile)
   $('#get-profiles').hide()
+  $('.input_class').hide()
+  $('.content').on('click', '.update-profile', function (event) {
+    $(event.target).closest('section').find('.update-profile-form').show()
+  })
 }
+// const onEditProfile = function () {
+//   $('.updateProfile').show()
+//   // $('.editProfile').show()
+//   $('.content').hide()
+//   // $('.editProfile').show()
+// }
 const onAddNewProfile = function () {
   console.log('hello')
   $('#content').hide()

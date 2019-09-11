@@ -25,6 +25,7 @@ const signInSuccess = function (data) {
   $('.second-view').show()
   $('#signed-in-user').text(store.user.email)
   $('form').trigger('reset')
+  $('.editProfile').hide()
 }
 
 const signInFailure = function (data) {

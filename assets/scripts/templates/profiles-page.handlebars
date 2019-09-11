@@ -14,10 +14,12 @@
         <th>Age</th>
         <th>Pronouns</th>
         <th>Community Assets</th>
+        <th>Edit</th>
+        <th>Delete</th>
       </tr>
     </thead>
+    {{#each profiles as |profile|}}
     <tbody>
-      {{#each profiles as |profile|}}
       <tr>
         <td>{{profile.name}}</td>
         <td>{{profile.location}}</td>
@@ -31,16 +33,37 @@
         <td>{{profile.age}}</td>
         <td>{{profile.pronouns}}</td>
         <td>{{profile.community_assets}}</td>
-        <td><button class="edit-profile btn btn-warning" data-profile-id="{{profile.id}}">Edit</button>
-          <button class="delete-profile btn btn-danger" data-profile-id="{{profile.id}}">Delete {{profile.id}}</button>
-        </td>
+        <td><button class="edit-profile btn btn-warning" data-id="{{profile.id}}">Edit {{profile.id}}</button></td>
+        <td><button class="delete-profile btn btn-danger" data-id="{{profile.id}}">Delete {{profile.id}}</button></td>
       </tr>
-      {{/each}}
     </tbody>
+    {{/each}}
   </table>
-
 
   <div>
     <button id='new-profile' class="btn btn-lg btn-primary">Add New Profile</button>
   </div>
 </div>
+{{#each profiles as |profile|}}
+          {{log profile}}
+<form class="update-profile-form">
+      <h2>Update</h2>
+      <div class='update-profile' data-id="{{profile.id}}" value="{{profile.id}}"> {{profile.id}} </div>
+      <input name='profile[id]' class='input_class' data-id="{{profile.id}}" value="{{profile.id}}" type="text" placeholder="text">
+      <input name='profile[name]' value="{{profile.name}}" type="text" placeholder="name">
+      <input name='profile[location]' value="{{profile.location}}" type="text" placeholder="text">
+      <input name="profile[image_link]" value="{{profile.image_link}}" type="text" placeholder="text">
+      <input name="profile[personal_assets]" value="{{profile.personal_assets}}"  type="text" placeholder="text">
+      <input name="profile[professional_interests]" value="{{profile.professional_interests}}"  type="text" placeholder="text">
+      <input name='profile[hobbies]' value="{{profile.hobbies}}" type="text" placeholder="text">
+      <input name="profile[projects]" value="{{profile.projects}}" type="text" placeholder="text">
+      <input name="profile[contact_info]" value="{{profile.contact_info}}"  type="text" placeholder="text">
+      <input name='profile[express]' value="{{profile.express}}" type="text" placeholder="text">
+      <input name='profile[age]' value="{{profile.age}}" type="text" placeholder="text">
+      <input name="profile[pronouns]" value="{{profile.pronouns}}" type="text" placeholder="text">
+      <input name="profile[community_assets]" value="{{profile.community_assets}}"  type="text" placeholder="text">
+      <input type="submit" value="Update Profile">
+  </form>
+  {{/each}}
+
+  </div>
