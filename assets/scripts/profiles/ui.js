@@ -2,7 +2,6 @@
 const showProfilesTemplate = require('../templates/profiles-page.handlebars')
 
 const onCreateSuccess = (formData) => {
-  console.log(formData)
   $('#message2').text('Success Profile Created.')
   $('#create-profile').hide()
   $('form').trigger('reset')
