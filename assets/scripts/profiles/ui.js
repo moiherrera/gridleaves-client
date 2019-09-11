@@ -30,7 +30,7 @@ const onAddNewProfile = function () {
   $('#content').hide()
   $('#create-profile').show()
   $('#message2').text('Add a New Profile!')
-  $('#message3').text()
+  $('#message3').text('')
 }
 const onIndexFailure = function () {
   $('#message2').text('No profiles to get!')
