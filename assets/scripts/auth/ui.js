@@ -23,6 +23,7 @@ const signInSuccess = function (data) {
   $('#message2').addClass('success')
   $('#auth-events').hide()
   $('.second-view').show()
+  $('#create-profle').show()
   $('#signed-in-user').text(store.user.email)
   $('form').trigger('reset')
   $('.editProfile').hide()
