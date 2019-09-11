@@ -13,9 +13,9 @@ const index = function () {
   })
 }
 
-const destroy = formData => {
+const destroy = id => {
   return $.ajax({
-    url: config.apiUrl + '/profiles/' + formData.profile.id,
+    url: config.apiUrl + '/profiles/' + id,
     method: 'DELETE',
     headers: {
       Authorization: `Token token=${store.user.token}`

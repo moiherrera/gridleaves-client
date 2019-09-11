@@ -25,16 +25,11 @@ const onIndexSuccess = (data) => {
   $('#new-profile').on('click', onAddNewProfile)
   $('#get-profiles').hide()
   $('.input_class').hide()
-  $('.content').on('click', '.update-profile', function (event) {
-    $(event.target).closest('section').find('.update-profile-form').show()
-  })
 }
-// const onEditProfile = function () {
-//   $('.updateProfile').show()
-//   // $('.editProfile').show()
-//   $('.content').hide()
-//   // $('.editProfile').show()
-// }
+const onUpdateSuccess = function () {
+  $('#message2').text('Profile Updated')
+}
+
 const onAddNewProfile = function () {
   console.log('hello')
   $('#content').hide()
@@ -48,7 +43,12 @@ const onAddNewProfile = function () {
 //
 // const onUpdateFailure
 //
-// const onDestroySuccess
+const onDestroySuccess = function () {
+  $('#message2').text('Success Profile Destroyed')
+}
+const onDestroyFailure = function () {
+  $('#message2').text('Failed to Destroy Profile')
+}
 //
 // const onDestroyFailure
 
@@ -56,5 +56,8 @@ module.exports = {
   onCreateSuccess,
   onCreateFailure,
   onIndexSuccess,
-  onAddNewProfile
+  onAddNewProfile,
+  onDestroySuccess,
+  onDestroyFailure,
+  onUpdateSuccess
 }

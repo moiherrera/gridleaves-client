@@ -14,11 +14,11 @@
         <th>Age</th>
         <th>Pronouns</th>
         <th>Community Assets</th>
-        <th>Edit</th>
         <th>Delete</th>
       </tr>
     </thead>
     {{#each profiles as |profile|}}
+    {{log profile}}
     <tbody>
       <tr>
         <td>{{profile.name}}</td>
@@ -33,7 +33,6 @@
         <td>{{profile.age}}</td>
         <td>{{profile.pronouns}}</td>
         <td>{{profile.community_assets}}</td>
-        <td><button class="edit-profile btn btn-warning" data-id="{{profile.id}}">Edit {{profile.id}}</button></td>
         <td><button class="delete-profile btn btn-danger" data-id="{{profile.id}}">Delete {{profile.id}}</button></td>
       </tr>
     </tbody>

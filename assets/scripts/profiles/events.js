@@ -42,12 +42,12 @@ const onUpdateProfile = function (event) {
 
 const onDestroyProfile = event => {
   event.preventDefault()
-  const form = event.target
-  const formData = getFormFields(form)
-  api.destroy(formData)
+  const id = event.target.getAttribute('data-id')
+  console.log(id)
+  api.destroy(id)
     .then(() => {
       ui.onDestroySuccess()
-      onGetProfiles()
+      onGetProfiles(event)
     })
     .catch(ui.onDestroyFailure)
 }
