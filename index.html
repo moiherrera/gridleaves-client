@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>gridleaves</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <h1 class="titles">Gridleaves</h1>
+      <div id="auth-events">
+      <img class="leaves" src="public/leaves8.png" alt="leaves">
+      <p class="intro-text"> Gridleaves is a community-based database where individuals can post their community visions and share relevant information with other users in proximity to them. Users can also explore information posted by their neighbours. Come enrich your community with Gridleaves! </p>
+      <div id="signed-in-user"></div>
+      <div id="message"></div>
+      <form id='sign-up' class='border'>
+          <fieldset>
+              <legend>Sign up!</legend>
+              <input type="text" name="credentials[email]" placeholder="Email">
+              <input type="password" name="credentials[password]" placeholder="Password">
+              <input type='password' name="credentials[password_confirmation]" placeholder="Confirm Password">
+              <input type="submit" value="Sign up!">
+          </fieldset>
+      </form>
+
+      <form id='sign-in' class='border'>
+          <fieldset>
+              <legend>Sign In</legend>
+              <input type="text" name="credentials[email]" placeholder="Email">
+              <input type="password" name="credentials[password]" placeholder="Password">
+              <input type="submit" value="Sign in!">
+          </fieldset>
+      </form>
+    </div>
+    <div class="second-view">
+      <div class="messages" id="message2"></div>
+      <div class="messages" id="message3"></div>
+      <h3 class="messages"> Gridleaves Profiles </h3>
+
+      <form class="form1" action="" id='create-profile'>
+
+        <label for="name" class="input_name">Full Name</label>
+        <input name= "profile[name]" id="input_Name" type="text">
+
+        <label for="location" class="input_location">Location</label>
+        <input name= "profile[location]" id="input_location" type="text">
+
+        <label for="image-link" class="input_image_link">Link for Image</label>
+        <input name="profile[image_link]" id="input_image_link" type="text">
+
+        <label for="personal_assets" class="input_personal_assets">Personal Assets</label>
+        <p> Please tell us what you can provide for the community. This can range from your professional skillset to soft skills to personal assets such as meeting places, resources, or connections that can be utilized by the community to further any community development projects. </p>
+        <input name="profile[personal_assets]" id="input_personal_assets" type="text">
+
+        <label for="professional_interests" class="input_professional_interests">Professional Interests</label>
+        <p> Please tell us about your professional interests. Where are you working and for how long? What have you learned from your career? Have you ever considered using your professional skillset you improve your local neighborhood? Would you like to be connected with likeminded professionals in your area to develop local partnerships and projects? Please list anything that you want the community to know about your professional interests and how it might relate to community development.</p>
+        <input name="profile[professional_interests]" id="input_professional_interests" type="text">
+
+        <label for="hobbies" class="input_hobbies">Hobbies</label>
+        <input name="profile[hobbies]" id="input_hobbies" type="text">
+
+        <label for="projects" class="input_projects">Projects</label>
+        <p> Please list any projects you are currently working on and any projects you would like to see implemented in the community. Ex: Developing a community_garden, forming a tenant union, weekly street clean up, developing a compost program, etc.</p>
+        <input name="profile[projects]" id="input_projects" type="text">
+
+        <label for="contact_info" class="input_contact_info">Contact_Info</label>
+        <p> Please list any contact information you are comfortable sharing. This includes but is not limited to: phone number, email, social media links, portfolios, linkedin, or personal websites. </p>
+        <input name="profile[contact_info]" id="input_contact_info" type="text">
+
+        <label for="express" class="input_express">Express</label>
+        <p> This form allows you to express yourself in anyway you choose. Write a poem, provide a link to a website, let us know whats on your mind, anything that might help the community understand you a bit better, put it in this form (: </p>
+        <input name="profile[express]" id="input_express" type="text">
+
+        <label for="age" class="input_age">Age</label>
+        <input name="profile[age]" id="input_age" type="text">
+
+        <label for="pronouns" class="input_pronouns">Pronouns</label>
+        <input name="profile[pronouns]" id="input_pronouns" type="text">
+
+        <label for="community_assets" class="input_community_assets">Community Assets</label>
+        <p> Many individuals are not aware of all the resources in the area that they live in. A community asset can be defined as anything that can be used to improve the quality of community life. This could be a person with particular skillset, it can be a physical structure or place such as a park or a community center, it can be organizations that are located within the community. Let us know what resources you have used in your community or any that you are familiar with. </p>
+        <input name="profile[community_assets]" id="input_community_assets" type="text">
+
+        <button>Create Profile</button>
+
+    </form>
+
+    <div id="content" class="content">
+    </div>
+
+<!-- <form data-id="{{profile.id}}" class="editProfile" action="">
+
+  <label for="name" class="input_name">Full Name</label>
+  <input name= "profile[name]" id="update_Name" type="text">
+
+  <label for="location" class="input_location">Location</label>
+  <input name= "profile[location]" id="update_location" type="text">
+
+  <label for="image-link" class="update_image_link">Link for Image</label>
+  <input name="profile[image_link]" id="update_image_link" type="text">
+
+  <label for="personal_assets" class="input_personal_assets">Personal Assets</label>
+  <p> Please tell us what you can provide for the community. This can range from your professional skillset to soft skills to personal assets such as meeting places, resources, or connections that can be utilized by the community to further any community development projects. </p>
+  <input name="profile[personal_assets]" id="update_personal_assets" type="text">
+
+  <label for="professional_interests" class="input_professional_interests">Professional Interests</label>
+  <p> Please tell us about your professional interests. Where are you working and for how long? What have you learned from your career? Have you ever considered using your professional skillset you improve your local neighborhood? Would you like to be connected with likeminded professionals in your area to develop local partnerships and projects? Please list anything that you want the community to know about your professional interests and how it might relate to community development.</p>
+  <input name="profile[professional_interests]" id="update_professional_interests" type="text">
+
+  <label for="hobbies" class="input_hobbies">Hobbies</label>
+  <input name="profile[hobbies]" id="update_hobbies" type="text">
+
+  <label for="projects" class="input_projects">Projects</label>
+  <p> Please list any projects you are currently working on and any projects you would like to see implemented in the community. Ex: Developing a community_garden, forming a tenant union, weekly street clean up, developing a compost program, etc.</p>
+  <input name="profile[projects]" id="update_projects" type="text">
+
+  <label for="contact_info" class="update_contact_info">Contact_Info</label>
+  <p> Please list any contact information you are comfortable sharing. This includes but is not limited to: phone number, email, social media links, portfolios, linkedin, or personal websites. </p>
+  <input name="profile[contact_info]" id="update_contact_info" type="text">
+
+  <label for="express" class="input_express">Express</label>
+  <p> This form allows you to express yourself in anyway you choose. Write a poem, provide a link to a website, let us know whats on your mind, anything that might help the community understand you a bit better, put it in this form (: </p>
+  <input name="profile[express]" id="update_express" type="text">
+
+  <label for="age" class="input_age">Age</label>
+  <input name="profile[age]" id="update_age" type="text">
+
+  <label for="pronouns" class="input_pronouns">Pronouns</label>
+  <input name="profile[pronouns]" id="update_pronouns" type="text">
+
+  <label for="community_assets" class="input_community_assets">Community Assets</label>
+  <p> Many individuals are not aware of all the resources in the area that they live in. A community asset can be defined as anything that can be used to improve the quality of community life. This could be a person with particular skillset, it can be a physical structure or place such as a park or a community center, it can be organizations that are located within the community. Let us know what resources you have used in your community or any that you are familiar with. </p>
+  <input name="profile[community_assets]" id="update_community_assets" type="text">
+
+  <button>Update Profile</button>
+
+</form> -->
+
+    <form id='get-profiles' class='border'>
+        <fieldset>
+            <legend>Get Profiles</legend>
+            <input type="submit" value="Get Profiles">
+        </fieldset>
+    </form>
+
+      <form id='sign-out' class='border'>
+          <fieldset>
+              <legend>Sign Out</legend>
+              <input type="submit" value="Sign Out!">
+          </fieldset>
+      </form>
+
+      <form id='change-password' class='border'>
+          <fieldset>
+              <legend>Change Password</legend>
+              <input type="password" name="passwords[old]" placeholder="Current Password">
+              <input type="password" name="passwords[new]" placeholder="New Password">
+              <input type='submit' value='Change Password!'>
+          </fieldset>
+      </form>
+    </div>
+    </body>
+</html>
