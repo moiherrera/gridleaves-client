@@ -21,6 +21,10 @@ form button {
 form button:hover {
   background: gold;
 }
+.messages {
+  position: relative;
+  left: 29px;
+}
 
 label {
   padding: 0.5em 0.5em 0.5em 0;
@@ -39,6 +43,45 @@ img {
   max-height: 100%;
 }
 
+.leaves {
+  position: relative;
+    z-index: -1;
+  bottom: 132px;
+  width: 450px;
+  height: 700px;
+  left: 1070px;
+
+}
+.titles {
+  position: relative;
+  left: 25px;
+  color: rgba(55, 153, 55, 1);
+}
+
+#sign-up {
+  position: relative;
+  bottom: 1400px;
+  box-shadow: 8px 8px 5px rgba(0,0,0, .6);
+  left: 200px;
+}
+
+#sign-in {
+  position: relative;
+  bottom: 1400px;
+  box-shadow: 8px 8px 5px rgba(0,0,0, .6);
+  left: 200px;
+}
+
+.intro-text {
+  position: relative;
+  left: 25px;
+  width: 500px;
+  height: 700px;
+  bottom: 700px;
+  // border: 3px black solid;
+  font-size: 30px;
+  word-wrap: break-word;
+}
 @media (min-width: 400px) {
   form {
     grid-template-columns: 200px 1fr;
