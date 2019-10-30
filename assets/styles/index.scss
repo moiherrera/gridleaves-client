@@ -82,6 +82,10 @@ img {
   font-size: 30px;
   word-wrap: break-word;
 }
+
+.zam {
+  width: 300px;
+}
 @media (min-width: 400px) {
   form {
     grid-template-columns: 200px 1fr;
